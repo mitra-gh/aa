@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.menus.profile.AvatarMenu"
+            stylesheets="@../style/style.css"
+            prefHeight="750.0" prefWidth="1000.0">
+    <center>
+        <StackPane>
+            <BorderPane fx:id="block">
+                <center>
+                    <VBox alignment="CENTER" fx:id="layout" maxWidth="550" maxHeight="600">
+                        <Label fx:id="avatarLabel" styleClass="headLabel">
+                            <VBox.margin>
+                                <Insets bottom="20"/>
+                            </VBox.margin>
+                        </Label>
+                        <GridPane hgap="20" vgap="20" fx:id="avatarsGrid" alignment="CENTER"/>
+                        <Button alignment="CENTER" fx:id="uploadFile" styleClass="submit" onMouseClicked="#openFile">
+                            <VBox.margin>
+                                <Insets top="40"/>
+                            </VBox.margin>
+                        </Button>
+                    </VBox>
+                </center>
+                <left>
+                    <VBox alignment="TOP_CENTER" fx:id="bar" minWidth="250" minHeight="700" spacing="20">
+                        <Rectangle fx:id="profilePhoto" width="150" height="150">
+                            <VBox.margin>
+                                <Insets top="80" bottom="30"/>
+                            </VBox.margin>
+                        </Rectangle>
+                        <Button fx:id="changeUsername" minWidth="250" styleClass="navItem"
+                                onMouseClicked="#goToProfileMenu"/>
+                        <Button fx:id="changePassword" minWidth="250" styleClass="navItem" onMouseClicked="#goToChangePasswordMenu"/>
+                        <Button fx:id="logout" minWidth="250" styleClass="navItem" onMouseClicked="#logout"/>
+                        <Button fx:id="deleteAccount" minWidth="250" styleClass="navItem"
+                                onMouseClicked="#deleteAccount"/>
+                        <Button fx:id="back" minWidth="250" styleClass="navItem" onMouseClicked="#back"/>
+                    </VBox>
+                </left>
+            </BorderPane>
+
+        </StackPane>
+    </center>
+</BorderPane>

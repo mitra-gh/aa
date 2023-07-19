@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<StackPane fx:id="mainRoot" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="view.menus.GameMenu"
+           stylesheets="@../style/style.css"
+           prefHeight="750.0" prefWidth="1000.0">
+    <BorderPane>
+        <top>
+        <HBox>
+            <Rectangle width="30" height="30" fx:id="back" onMouseClicked="#showPauseMenu">
+                <HBox.margin>
+                    <Insets top="20" left="20"/>
+                </HBox.margin>
+            </Rectangle>
+        </HBox>
+    </top>
+        <left>
+        <VBox fx:id="gameData"/>
+    </left>
+    </BorderPane>
+</StackPane>

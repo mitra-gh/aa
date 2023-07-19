@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="registerRoot" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.menus.RegisterMenu"
+            stylesheets="@../style/style.css"
+            prefHeight="750.0" prefWidth="1000.0">
+
+    <center>
+        <VBox alignment="CENTER" fx:id="registerLayout" maxWidth="460" maxHeight="552">
+            <HBox alignment="BASELINE_LEFT">
+                <Label alignment="BASELINE_LEFT" text="register" opacity="0" fx:id="registerLabel"/>
+            </HBox>
+            <HBox alignment="BASELINE_RIGHT">
+                <Button alignment="BASELINE_RIGHT" text="+ " minWidth="80" minHeight="80" textAlignment="CENTER"
+                        rotate="45" styleClass="changeButton" fx:id="changeToLoginButton" onMouseClicked="#changeToLogin">
+                    <HBox.margin>
+                        <Insets right="-40"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+
+            <VBox alignment="CENTER" spacing="10" fx:id="thirdHide" opacity="0">
+                <VBox alignment="CENTER" maxWidth="300">
+                    <TextField promptText="username..." fx:id="registerUsername" styleClass="inputField" maxWidth="300"/>
+                    <HBox alignment="BASELINE_LEFT">
+                        <Label fx:id="registerUsernameError" styleClass="errorLabel"/>
+                    </HBox>
+                </VBox>
+
+                <VBox alignment="CENTER" maxWidth="300">
+                    <PasswordField promptText="password..." fx:id="registerPassword" styleClass="inputField"
+                                   maxWidth="300"/>
+                    <HBox alignment="BASELINE_LEFT">
+                        <Label fx:id="registerPassError" styleClass="errorLabel"/>
+                    </HBox>
+
+                </VBox>
+                <VBox alignment="CENTER" maxWidth="300">
+                    <PasswordField promptText="repeat password..." fx:id="registerRepeatPassword" styleClass="inputField"
+                                   maxWidth="300"/>
+                    <HBox alignment="BASELINE_LEFT">
+                        <Label fx:id="registerRepeatPassError" styleClass="errorLabel"/>
+                    </HBox>
+
+                </VBox>
+                <Button text="register" styleClass="submit" fx:id="registerSubmit" maxWidth="300"
+                        onMouseClicked="#register">
+                </Button>
+                <Label text="skip" fx:id="skip" onMouseClicked="#skip"/>
+            </VBox>
+        </VBox>
+    </center>
+
+</BorderPane>

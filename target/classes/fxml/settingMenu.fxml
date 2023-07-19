@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<BorderPane fx:id="settingRoot" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.menus.SettingMenu"
+            stylesheets="@../style/style.css"
+            prefHeight="750.0" prefWidth="1000.0">
+    <center>
+        <StackPane>
+            <BorderPane fx:id="block">
+                <center>
+                    <StackPane>
+                        <BorderPane>
+                            <top>
+                                <HBox>
+                                    <Rectangle width="30" height="30" fx:id="back" onMouseClicked="#goMainMenu">
+                                        <HBox.margin>
+                                            <Insets left="20" top="20"/>
+                                        </HBox.margin>
+                                    </Rectangle>
+
+                                </HBox>
+                            </top>
+                        </BorderPane>
+                        <VBox alignment="CENTER" fx:id="layout" maxWidth="460" maxHeight="552">
+                            <Label fx:id="settingLabel" styleClass="headLabel">
+                                <VBox.margin>
+                                    <Insets bottom="20"/>
+                                </VBox.margin>
+                            </Label>
+                            <ScrollPane fx:id="settingBlock" maxHeight="400" maxWidth="420">
+                                <VBox fx:id="settingContent" alignment="CENTER" spacing="40"/>
+                            </ScrollPane>
+                        </VBox>
+                    </StackPane>
+                </center>
+            </BorderPane>
+        </StackPane>
+    </center>
+</BorderPane>

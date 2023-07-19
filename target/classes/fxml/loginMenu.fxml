@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="loginRoot" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.menus.LoginMenu"
+            stylesheets="@../style/style.css"
+            prefHeight="750.0" prefWidth="1000.0">
+
+    <center>
+        <VBox alignment="CENTER" fx:id="loginLayout" maxWidth="460" maxHeight="552" >
+            <HBox alignment="BASELINE_LEFT">
+                <Label alignment="BASELINE_LEFT" text="login" opacity="0" fx:id="loginLabel"/>
+            </HBox>
+            <HBox alignment="BASELINE_RIGHT">
+                <Button alignment="BASELINE_RIGHT" text="+ " minWidth="80" minHeight="80" textAlignment="CENTER"
+                        styleClass="changeButton" fx:id="changeToRegisterButton" onMouseClicked="#changeToRegister">
+                    <HBox.margin>
+                        <Insets right="-40"/>
+                    </HBox.margin>
+                </Button>
+                <VBox.margin>
+                    <Insets bottom="50"/>
+                </VBox.margin>
+            </HBox>
+
+            <VBox alignment="CENTER" spacing="10" fx:id="hideThird" opacity="0">
+                <VBox alignment="CENTER" maxWidth="300">
+                    <TextField promptText="username..." fx:id="loginUsername" styleClass="inputField" maxWidth="300"/>
+                    <HBox alignment="BASELINE_LEFT">
+                        <Label fx:id="loginUsernameError" styleClass="errorLabel"/>
+                    </HBox>
+                </VBox>
+
+                <VBox alignment="CENTER" maxWidth="300">
+                    <PasswordField promptText="password..." fx:id="loginPassword" styleClass="inputField"
+                                   maxWidth="300"/>
+                    <HBox alignment="BASELINE_LEFT">
+                        <Label fx:id="loginPassError" styleClass="errorLabel"/>
+                    </HBox>
+
+                </VBox>
+
+                <Button text="login" styleClass="submit" fx:id="loginSubmit" maxWidth="300"
+                        onMouseClicked="#login">
+                    <VBox.margin>
+                        <Insets top="30"/>
+                    </VBox.margin>
+                </Button>
+                <Label text="skip" fx:id="skip" onMouseClicked="#skip"/>
+            </VBox>
+        </VBox>
+    </center>
+
+</BorderPane>
